@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-16">
+      <meta  name="viewpoint" content="width=device-width,initial-scale=1.0">
+      <title>Practise</title>
+    </head>
+    <body>
+        <div id="res"></div>
+        <input type="text" name="name" id="name"/>
+        <button onclick="greet()">
+          greet
+        </button>
+        <div class="greet"></div>
+    </body>
+    <script type="text/javascript"> 
+        //different types of funciton
+        // alert("This is a website") it is used to alert user that something has happened
+        // confirm("")opens a dialog box and returns true/false depending on user's click
+        // console.log()writ information to the browser console ,good for debugging purposes
+        // document.write()is used to write directly to the html document
+        // document.write("<h1>This is a document tag</h1>")
+        // prompt(msg,default)//creates dialog for user input
+        // prompt("hello","this is a practise") 
+        // var x=5
+        // var y=6
+        // var z=x+y
+        // document.getElementById('res').innerHTML=z
+        function greet(){
+           var name=document.getElementById('name').value;
+           var string ="Hello" + name
+           document.getElementsByClassName('greet')[0].innerHTML = string;
+        }
+        </script>
+</html>
