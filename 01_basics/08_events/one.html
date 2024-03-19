@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html elements</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img id="A" width="200px" src="https://images.pexels.com/photos/13739807/pexels-photo-13739807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
+            <li><img id="B" width="200px" src="https://images.pexels.com/photos/1483580/pexels-photo-1483580.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li><img id="C" width="200px" src="https://images.pexels.com/photos/3347244/pexels-photo-3347244.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li><img id="D" width="200px" src="https://images.pexels.com/photos/3617194/pexels-photo-3617194.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li><img id="E" width="200px" src="https://images.pexels.com/photos/3119160/pexels-photo-3119160.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li style="color: blueviolet ;"><a href="www.google.com">GOOGLE</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //  document.getElementById('C').onclick=function(){
+    //     alert("C clicked")
+    //  }
+    //attachEvent()
+    //jQuery-on
+    
+//     document.getElementById('Images').addEventListener('click',function(e){
+// console.log("Images clicked")
+//     },false)
+//     document.getElementById('C').addEventListener('click',function(e){
+// console.log("C+ clicked")
+// e.stopPropagation()
+// //stop propogation detaches the inner elemnet does preventing it from bubbleing*****here the event will not bubble upp and go to other event
+//     },false)
+
+//     //prevent default
+//     document.getElemetById('google').addEventListner('click',function(e){
+//         e.defaultPrevented()
+//         console.log("google click")
+//     })
+       
+      document.querySelector('#images').addEventListener('click',function (e) {
+        console.log(e.target.parentNode)
+        if (e.target.tagName) {
+            
+        }
+        let removeIt=e.target.parentNode
+       removeIt.remove()
+       //removeIt.parentNode.removeChild(removeIt)
+      }) 
+
+</script>
+</html>
